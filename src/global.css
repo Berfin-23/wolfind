@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@import "tailwindcss";
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  /* Background */
+  --background: #121212;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #27272a;
+
+  /* Text */
+  --text-primary: #f8f8f8;
+  --text-secondary: #b9b9b9;
+  --text-inverted: #121212;
+
+  --text-primary-hover: #e5e5e5;
+  --text-secondary-hover: #c0c0c0;
+  --text-inverted-hover: #1a1a1a;
+
+  /* Buttons */
+  --button-primary-bg: #f8f8f8;
+  --button-primary-text: #121212;
+  --button-primary-hover-bg: #e6e7eb;
+
+  --button-secondary-bg: #27272a;
+  --button-secondary-text: #f8f8f8;
+  --button-secondary-hover-bg: #3f3f47;
+
+  --button-ghost-bg: transparent;
+  --button-ghost-text: #d4d4d8;
+  --button-ghost-hover-bg: #27272a;
+  --button-ghost-hover-text: #f8f8f8;
+
+  /* Border */
+  --border-primary: #2a2a2e;
+  --border-secondary: #1f1f23;
+
+  /* Sidebar */
+  --sidebar-bg: #0a0a0a;
+  --sidebar-border: #1f1f23;
+  --sidebar-item-hover: #18181b;
+  --sidebar-item-active: #27272a;
+  --sidebar-text: #e5e7eb;
+  --sidebar-text-secondary: #9ca3af;
+  --sidebar-icon: #6b7280;
+  --sidebar-icon-active: #f3f4f6;
+
+  /* Accent Colors */
+  --accent-primary: #818cf8;
+  --accent-secondary: #a78bfa;
+  --accent-gradient-from: #6366f1;
+  --accent-gradient-to: #8b5cf6;
+
+  /* Table Components */
+  --table-bg: #0a0a0a;
+  --table-bg-secondary: #141414;
+  --table-border: #1f1f23;
+  --table-header-bg: #18181b;
+  --table-header-text: #9ca3af;
+  --table-row-hover: #1a1a1e;
+  --table-text-primary: #e5e7eb;
+  --table-text-secondary: #a1a1aa;
+  --table-text-muted: #71717a;
+
+  /* Input Components */
+  --input-bg: #0a0a0a;
+  --input-border: #27272a;
+  --input-border-focus: #3f3f46;
+  --input-text: #f4f4f5;
+  --input-placeholder: #52525b;
+
+  /* Modal Components */
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+  --modal-bg: #0f0f0f;
+  --modal-border: #27272a;
+  --modal-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+
+  /* Status Colors */
+  --status-success: #10b981;
+  --status-warning: #f59e0b;
+  --status-error: #ef4444;
+  --status-info: #60a5fa;
+  --status-neutral: #71717a;
+
+  /* Progress Bar */
+  --progress-bg: #27272a;
+  --progress-fill: #f4f4f5;
+}
+
+@theme inline {
+  /* Background */
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
+
+  /* Text */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-inverted: var(--text-inverted);
+
+  --color-text-primary-hover: var(--text-primary-hover);
+  --color-text-secondary-hover: var(--text-secondary-hover);
+  --color-text-inverted-hover: var(--text-inverted-hover);
+
+  /* Buttons */
+  --color-button-primary-bg: var(--button-primary-bg);
+  --color-button-primary-text: var(--button-primary-text);
+  --color-button-primary-hover-bg: var(--button-primary-hover-bg);
+
+  --color-button-secondary-bg: var(--button-secondary-bg);
+  --color-button-secondary-text: var(--button-secondary-text);
+  --color-button-secondary-hover-bg: var(--button-secondary-hover-bg);
+
+  --color-button-ghost-bg: var(--button-ghost-bg);
+  --color-button-ghost-text: var(--button-ghost-text);
+  --color-button-ghost-hover-bg: var(--button-ghost-hover-bg);
+  --color-button-ghost-hover-text: var(--button-ghost-hover-text);
+
+  /* Border */
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
+
+  /* Sidebar */
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-item-hover: var(--sidebar-item-hover);
+  --color-sidebar-item-active: var(--sidebar-item-active);
+  --color-sidebar-text: var(--sidebar-text);
+  --color-sidebar-text-secondary: var(--sidebar-text-secondary);
+  --color-sidebar-icon: var(--sidebar-icon);
+  --color-sidebar-icon-active: var(--sidebar-icon-active);
+
+  /* Accent Colors */
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-gradient-from: var(--accent-gradient-from);
+  --color-accent-gradient-to: var(--accent-gradient-to);
+
+  /* Table Components */
+  --color-table-bg: var(--table-bg);
+  --color-table-bg-secondary: var(--table-bg-secondary);
+  --color-table-border: var(--table-border);
+  --color-table-header-bg: var(--table-header-bg);
+  --color-table-header-text: var(--table-header-text);
+  --color-table-row-hover: var(--table-row-hover);
+  --color-table-text-primary: var(--table-text-primary);
+  --color-table-text-secondary: var(--table-text-secondary);
+  --color-table-text-muted: var(--table-text-muted);
+
+  /* Input Components */
+  --color-input-bg: var(--input-bg);
+  --color-input-border: var(--input-border);
+  --color-input-border-focus: var(--input-border-focus);
+  --color-input-text: var(--input-text);
+  --color-input-placeholder: var(--input-placeholder);
+  /* Modal Components */
+  --color-modal-overlay: var(--modal-overlay);
+  --color-modal-bg: var(--modal-bg);
+  --color-modal-border: var(--modal-border);
+  --color-modal-shadow: var(--modal-shadow);
+
+  /* Custom Shadow Classes */
+  --shadow-dialog: var(--modal-shadow);
+  --color-modal-shadow: var(--modal-shadow);
+
+  /* Status Colors */
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+  --color-status-error: var(--status-error);
+  --color-status-info: var(--status-info);
+  --color-status-neutral: var(--status-neutral);
+
+  /* Progress Bar */
+  --color-progress-bg: var(--progress-bg);
+  --color-progress-fill: var(--progress-fill);
+}
+
+.footerHeart {
+  color: rgb(235, 48, 48);
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footerHeart:hover {
+  color: rgb(255, 0, 0);
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.7),
+    0 0 20px rgba(255, 0, 0, 0.7);
+  transform: scale(1.1);
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+}
+
+.myLink {
+  transition:
+    color 0.3s ease,
+    text-decoration 0.3s ease;
+}
+
+.myLink:hover,
+.myLink:focus {
+  @apply text-text-secondary;
+  text-decoration: underline;
+  transition:
+    color 0.3s ease,
+    text-decoration 0.3s ease;
+}
+
+/* Custom scrollbar styling */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--border-secondary);
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thumb-border-primary::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+}
+
+.scrollbar-thumb-border-secondary::-webkit-scrollbar-thumb:hover {
+  background: var(--border-secondary);
+}
