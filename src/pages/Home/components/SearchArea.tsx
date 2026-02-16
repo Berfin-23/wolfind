@@ -69,7 +69,7 @@ const SearchArea = () => {
   }, []);
 
   return (
-    <div className="w-full my-30">
+    <div className="w-full h-screen pt-30">
       <motion.div
         layout
         className="mx-auto text-center px-6"
