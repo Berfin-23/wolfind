@@ -9,6 +9,7 @@ interface CourseCardProps {
     moCode: string | null;
     mgCode: string | null;
     duration: string;
+    dept: string;
   };
 }
 
@@ -121,6 +122,10 @@ const CourseCard = ({ course }: CourseCardProps) => {
           <span className="font-medium text-text-primary">
             {course.duration}
           </span>
+        </div>
+        <div>
+          <span className="text-text-secondary">Dept: </span>
+          <span className="font-medium text-text-primary">{course.dept}</span>
         </div>
       </div>
     </motion.div>

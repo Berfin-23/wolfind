@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import SearchBar from "./SearchBar";
 import CourseCard from "./CourseCard";
-import { getCourses } from "../../../services/getCourses";
+import { courses } from "../../../services/getCourses";
 
 const SearchArea = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -14,11 +14,12 @@ const SearchArea = () => {
     if (!searchQuery.trim()) return [];
 
     const query = searchQuery.toLowerCase();
-    return getCourses.filter(
+    return courses.filter(
       (course) =>
         course.title.toLowerCase().includes(query) ||
         course.moCode?.toLowerCase().includes(query) ||
-        course.mgCode?.toLowerCase().includes(query),
+        course.mgCode?.toLowerCase().includes(query) ||
+        course.dept.toLowerCase().includes(query),
     );
   }, [searchQuery]);
 
